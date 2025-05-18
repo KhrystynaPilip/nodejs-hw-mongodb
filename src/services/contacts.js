@@ -23,3 +23,18 @@ export const deleteContact = async (contactId) => {
   return contact;
   // return ContactsCollection.findByIdAndDelete(studentId);
 };
+
+export const updateContact = async (contactId, payload, options = {}) => {
+  const rawResult = await ContactsCollection.findOneAndUpdate(
+    { _id: contactId },
+    payload,
+    { new: true, includeResultMetadata: true, ...options },
+  );
+
+  if (!rawResult || !rawResult.value) return null;
+
+  return {
+    contact: rawResult.value,
+    isnew: Boolean(rawResult?.lastErrorObject?.upserted),
+  };
+};
