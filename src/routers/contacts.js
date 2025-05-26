@@ -12,7 +12,10 @@ import {
   upsertContactController,
 } from '../controllers/contacts.js';
 import { validateBody } from '../middlewares/validateBody.js';
-import { createContactSchema } from '../validation/contacts.js';
+import {
+  createContactSchema,
+  updateContactSchema,
+} from '../validation/contacts.js';
 
 const router = Router();
 const jsonParser = express.json();
@@ -49,6 +52,7 @@ router.patch(
   '/contacts/:contactId',
   isValidId,
   jsonParser,
+  validateBody(updateContactSchema),
   ctrlWrapper(patchContactController),
 );
 
