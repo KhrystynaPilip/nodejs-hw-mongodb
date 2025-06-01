@@ -1,7 +1,14 @@
 import Joi from 'joi';
+import { isValidObjectId } from 'mongoose';
 
 // Оголошення схеми з кастомізованими повідомленнями
 export const createContactSchema = Joi.object({
+  userId: Joi.string().custom((value, helper) => {
+    if (value && !isValidObjectId(value)) {
+      return helper.messages('User id should be a valid mongo id');
+    }
+    return true;
+  }),
   name: Joi.string().min(3).max(20).required().messages({
     'string.base': 'Username should be a string', // Кастомізація повідомлення для типу "string"
     'string.min': 'Username should have at least {#limit} characters',
