@@ -7,7 +7,7 @@ const usersSchema = new Schema(
     password: { type: String, required: true },
   },
   {
-    timastamps: true,
+    timestamps: true,
     versionKey: false,
   },
 );
