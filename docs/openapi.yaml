@@ -15,7 +15,7 @@ tags:
 
 servers:
   - url: http://localhost:3000
-  - url: https://example.com/api/v1
+  - url: https://nodejs-hw-mongodb-4-vscg.onrender.com
   #посилання на задеплоєний сайт
 paths:
   # тут будуть посилання на ендпоінти
