@@ -1,13 +1,13 @@
 tags:
   - Contacts
-summary: Delete contact by ID
+summary: Delete contact by id
 operationId: deleteContact
 description: Delete a contact by its unique identifier
 security:
   - bearerAuth: []
 parameters:
   - in: path
-    name: contactId
+    name: id
     required: true
     schema:
       type: string
@@ -17,6 +17,6 @@ responses:
   '204':
     description: Contact successfully deleted
   '401':
-    $ref: '../../components/responses/401.yaml'
+    $ref: '../../../components/responses/401.yaml'
   '404':
     $ref: '../../../components/responses/404.yaml'

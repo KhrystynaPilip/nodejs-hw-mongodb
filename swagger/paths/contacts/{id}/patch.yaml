@@ -1,13 +1,13 @@
 tags:
   - Contacts
-summary: Update contact by ID
+summary: Update contact by id
 operationId: updateContact
 description: Partially update contact by ID. Allows updating fields and uploading a photo.
 security:
   - bearerAuth: []
 parameters:
   - in: path
-    name: contactId
+    name: id
     required: true
     schema:
       type: string
@@ -59,8 +59,8 @@ responses:
               type: string
               example: Successfully patched a contact!
             data:
-              $ref: '../../components/schemas/contact.yaml'
+              $ref: ../../../components/schemas/contact.yaml
   '401':
-    $ref: '../../components/responses/401.yaml'
+    $ref: '../../../components/responses/401.yaml'
   '404':
     $ref: '../../../components/responses/404.yaml'
