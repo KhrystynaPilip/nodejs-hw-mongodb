@@ -36,25 +36,25 @@ paths:
       $ref: ../swagger/paths/auth/post-login.yaml
   /auth/register:
     post:
-      $ref: '../swagger/paths/auth/post-register.yaml'
+      $ref: ../swagger/paths/auth/post-register.yaml
   /auth/logout:
     post:
-      $ref: '../swagger/paths/auth/post-logout.yaml'
+      $ref: ../swagger/paths/auth/post-logout.yaml
   /auth/refresh:
     post:
-      $ref: '../swagger/paths/auth/post-refresh.yaml'
+      $ref: ../swagger/paths/auth/post-refresh.yaml
   /auth/send-reset-email:
     post:
-      $ref: '../swagger/paths/auth/post-send-reset-email.yaml'
+      $ref: ../swagger/paths/auth/post-send-reset-email.yaml
   /auth/reset-pwd:
     post:
-      $ref: '../swagger/paths/auth/post-reset-pwd.yaml'
+      $ref: ../swagger/paths/auth/post-reset-pwd.yaml
   /auth/get-oauth-url:
     get:
-      $ref: '../swagger/paths/auth/get-oauth-url.yaml'
+      $ref: ../swagger/paths/auth/get-oauth-url.yaml
   /auth/confirm-oauth:
     post:
-      $ref: '../swagger/paths/auth/post-confirm-oauth.yaml'
+      $ref: ../swagger/paths/auth/post-confirm-oauth.yaml
 components:
   securitySchemes:
     bearerAuth:
